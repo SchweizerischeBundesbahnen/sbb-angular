@@ -32,6 +32,11 @@ const routes: Routes = [
     loadChildren: () => import('./maps/maps.module').then((m) => m.MapsModule),
   },
   {
+    path: 'maps-leaflet',
+    loadChildren: () =>
+      import('./maps-leaflet/maps-leaflet.module').then((m) => m.MapsLeafletModule),
+  },
+  {
     path: '**',
     redirectTo: '',
   },

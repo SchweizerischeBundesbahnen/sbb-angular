@@ -1,0 +1,28 @@
+<article class="container-fluid">
+  <div class="row">
+    <div>
+      <h4>Basic LeafletMap with EventHandlers</h4>
+      <sbb-leaflet-map
+        class="leaflet-map"
+        (mapClicked)="mapClicked($event)"
+        (mapReady)="mapReady($event)"
+        [mapOptions]="options"
+        [layersControlConfig]="layersControl"
+        #leafletMap
+      ></sbb-leaflet-map>
+    </div>
+
+    <br />
+    <button sbbButton mode="ghost" (click)="goToPoint(47.206508, 7.537479, 13)">
+      Go to Solothurn
+    </button>
+    <button
+      sbbButton
+      mode="ghost"
+      class="switzerland"
+      (click)="goToArea(47.743017, 6.465454, 46.259645, 10.458984)"
+    >
+      Show Switzerland
+    </button>
+  </div>
+</article>
